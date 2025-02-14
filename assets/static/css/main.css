@@ -1,0 +1,130 @@
+@font-face {
+    font-family: 'Golos Text';
+    src:
+        local('Golos Text Regular'),
+        local('Golos-Text-Regular'),
+        url('../font/GolosText-Regular.woff2') format('woff2'),
+        url('../font/GolosText-Regular.woff') format('woff'),
+        url('../font/GolosText-Regular.ttf') format('truetype');
+    font-weight: 400;
+    font-style: normal;
+}
+
+
+html, body {
+    height: 100%;
+    margin: 0;
+    overflow-x: hidden;
+    font-family: 'Golos Text', Arial, sans-serif;
+}
+
+body {
+    position: relative;
+    min-height: 100%;
+}
+
+.card {
+    backdrop-filter: blur(16px) saturate(180%);
+    -webkit-backdrop-filter: blur(16px) saturate(180%);
+    background-color: rgba(17, 25, 40, 0.75);
+    border-radius: 12px;
+    border: 1px solid rgba(255, 255, 255, 0.125);
+    color: white
+}
+div#root {
+    min-height: 100%;
+    background: linear-gradient(90deg, rgba(34, 40, 49, 1) 20%, rgb(115 232 136) 55%, rgba(34, 40, 49, 1) 80%);
+}
+div#sidebar {
+    box-shadow: inset -3px 0px 0 0 #424242;
+}
+.modal-content {
+    -webkit-backdrop-filter: blur(16px) saturate(180%);
+    background-color: rgb(153 224 217 / 75%);
+    border-radius: 12px;
+    border: 1px solid rgba(255, 255, 255, 0.125);
+}
+nav.navbar.navbar-expand-lg {
+    background: #212529;
+    box-shadow: inset 0px -3px 0 0 #424242;
+}
+.fas.fa-bars {
+    color: white;
+}
+
+#sidebar {
+    height: 100vh;
+    width: 250px;
+    position: fixed;
+    top: 0;
+    left: -250px;
+    background: #343a40;
+    color: white;
+}
+#sidebar.active {
+    left: 0;
+}
+#sidebar .nav-link {
+    color: white;
+}
+#content {
+    margin-left: 0;
+}
+#content.active {
+    margin-left: 250px;
+}
+
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
+a.nav-link {
+    color: #fff;
+    padding: 6px 12px;
+    text-decoration: none;
+    font-size: 14px;
+    transition: all 0.2s ease;
+    display: inline-block;
+    position: relative;
+    width: 95%
+}
+
+a.nav-link.active {
+    background: #535353;
+    color: #f1f1f1;
+    border-radius: 3px;
+    box-shadow: none;
+    transform: scale(1.05);
+}
+
+a.nav-link:hover {
+    background: #777;
+    color: #f1f1f1;
+    border-radius: 3px;
+    box-shadow: 0 3px 6px rgba(0, 0, 0, 0.1);
+    transform: scale(1.05);
+}
+
+
+a.nav-link.active:hover {
+    background: #444;
+    color: #fff;
+}
+
+a.nav-link::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    width: 0;
+    height: 2px;
+    background: #fff;
+    transition: width 0.3s, left 0.3s;
+}
+
+a.nav-link:hover::after {
+    width: 95%;
+    left: 2.5%;
+}

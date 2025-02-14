@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Responsive Sidebar</title>
+
+  <link href="../static/css/bootstrap.min.css" rel="stylesheet">
+  <link href="../static/css/main.css" rel="stylesheet">
+  <link href="../static/css/font-awesome/all.min.css" rel="stylesheet">
+</head>
+
+<body>
+
+<!-- Modal -->
+<div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalLabel">Modal title</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body">
+        <div class="col-sm-12 col-md-12">
+          <div class="alert alert-info">
+            <span class="fa fa-exclamation-circle"></span> <strong>Info Message</strong>
+            <hr class="message-inner-separator">
+            <p>
+              This alert needs your attention, but it's not super important.</p>
+          </div>
+        </div>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+        <button type="button" class="btn btn-primary">Download</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+<script src="../static/js/bootstrap.bundle.min.js"></script>
+<script src="../static/js/main.js"></script>
+
+<script>
+  document.addEventListener("DOMContentLoaded", function() {
+    var modal = new bootstrap.Modal(document.getElementById("exampleModal"));
+    modal.show();
+  });
+</script>
+
+</body>
+</html>
